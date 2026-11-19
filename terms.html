@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service - Qaryat Al-Sidrah Studio</title>
+<meta name="description" content="Terms of Service for Qaryat Al-Sidrah Studio, a desktop video production studio.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">Qaryat Al-Sidrah Studio</a>
+  <nav><a href="index.html">Home</a><a href="terms.html" aria-current="page">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+</div></header>
+
+<main><div class="wrap">
+<h1>Terms of Service</h1>
+<p class="meta">Effective date: November 19, 2026 · Last updated: November 19, 2026</p>
+
+<div class="summary">
+<p><strong>In short:</strong></p>
+<ul>
+  <li>Qaryat Al-Sidrah Studio is a desktop video production tool that runs on its operator's own computer.</li>
+  <li>You sign in to TikTok on TikTok's own page. The App never sees your TikTok password.</li>
+  <li>The App sends finished videos to your TikTok account <strong>as drafts only</strong>. It never publishes, schedules or posts anything automatically. You decide in the TikTok app whether to post.</li>
+  <li>You keep all rights to your videos. You are responsible for what you choose to post.</li>
+</ul>
+</div>
+
+<nav class="toc" aria-label="Contents"><ol>
+  <li><a href="#about">About these Terms</a></li>
+  <li><a href="#app">What the App is</a></li>
+  <li><a href="#eligibility">Who may use the App</a></li>
+  <li><a href="#tiktok">TikTok sign-in</a></li>
+  <li><a href="#drafts">Drafts only, no automatic publishing</a></li>
+  <li><a href="#content">Your content</a></li>
+  <li><a href="#use">Acceptable use</a></li>
+  <li><a href="#security">Credentials and security</a></li>
+  <li><a href="#thirdparty">Third-party services</a></li>
+  <li><a href="#privacy">Privacy</a></li>
+  <li><a href="#disconnect">Disconnecting and termination</a></li>
+  <li><a href="#warranty">No warranty</a></li>
+  <li><a href="#liability">Limitation of liability</a></li>
+  <li><a href="#changes">Changes to these Terms</a></li>
+  <li><a href="#law">Governing law</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ol></nav>
+
+<h2 id="about">1. About these Terms</h2>
+<p>These Terms of Service ("Terms") govern your use of Qaryat Al-Sidrah Studio (the "App"), operated by Aya Askar ("we", "us"). By connecting a TikTok account to the App or otherwise using it, you agree to these Terms. If you do not agree, do not use the App.</p>
+
+<h2 id="app">2. What the App is</h2>
+<p>The App is a desktop video production studio. It runs locally on the operator's computer and is used to organise, edit, check and export videos for the Qaryat Al-Sidrah animated series. When a video is finished, the App can send it to a connected TikTok account as a draft, so the account owner can review it and decide whether to post it in the TikTok app.</p>
+<p>The App is a private production tool. It is not offered for public sign-up, it has no web service of its own, and it does not run on our servers.</p>
+
+<h2 id="eligibility">3. Who may use the App</h2>
+<p>You may connect a TikTok account only if it is your own account, or you are authorised by its owner, and only if you meet TikTok's own age and eligibility requirements. The App is not directed at children under 13.</p>
+
+<h2 id="tiktok">4. TikTok sign-in</h2>
+<p>The App connects to TikTok through TikTok Login Kit for Desktop:</p>
+<ol>
+  <li>The App opens TikTok's own authorisation page in your web browser. You sign in there and choose whether to grant access. The App never receives or stores your TikTok password.</li>
+  <li>The App requests only these permissions (scopes): <code>user.info.basic</code> (your basic profile: an account identifier and display name) and <code>video.upload</code> (sending videos to your account as drafts). It does not request permission to publish posts directly.</li>
+  <li>The sign-in uses PKCE (Proof Key for Code Exchange) with a SHA-256 code challenge and a random <code>state</code> value. The App checks <code>state</code> to make sure the answer came from the sign-in you started. TikTok returns you to a temporary address on your own computer (<code>http://localhost:3455/callback/</code>) that only the App listens on.</li>
+  <li>TikTok then issues access tokens to the App. How they are stored is described in the <a href="privacy.html">Privacy Policy</a>.</li>
+</ol>
+<p>The App does not request TikTok's publishing permission (<code>video.publish</code>). You can withdraw access at any time (see <a href="#disconnect">section 11</a>).</p>
+
+<h2 id="drafts">5. Drafts only, no automatic publishing</h2>
+<ul>
+  <li>The App uploads videos to TikTok <strong>only as drafts</strong>, using TikTok's Content Posting API upload feature. TikTok delivers each upload to your TikTok inbox as a notification.</li>
+  <li>The App <strong>does not publish automatically</strong>. It does not use TikTok's Direct Post feature, does not set captions or privacy settings on TikTok, and does not schedule posts.</li>
+  <li>Each draft upload is started by the operator for one specific video. The App refuses to upload unless an approval note for that video is entered, and it records that note with the upload.</li>
+  <li>A draft becomes a post only if you open it in the TikTok app, review it, and post it yourself. Drafts you do not post stay unpublished.</li>
+</ul>
+
+<h2 id="content">6. Your content</h2>
+<p>You keep all rights you hold in the videos, images, audio and text you use with the App ("Your Content"). We claim no ownership of Your Content. You grant us only the limited permission needed to process Your Content on your computer and send it to TikTok at your request.</p>
+<p>You are responsible for Your Content and for any decision to post it. That includes having the rights to all music, images and other material it contains, and complying with TikTok's Terms of Service and Community Guidelines.</p>
+
+<h2 id="use">7. Acceptable use</h2>
+<p>You agree not to use the App to:</p>
+<ul>
+  <li>connect or upload to a TikTok account you do not own or are not authorised to manage;</li>
+  <li>upload content that is unlawful, infringing, or against TikTok's rules;</li>
+  <li>send spam or bulk uploads, or try to get around TikTok's rate limits or review processes;</li>
+  <li>reverse engineer, misuse or interfere with TikTok's services through the App.</li>
+</ul>
+
+<h2 id="security">8. Credentials and security</h2>
+<p>The App's TikTok client credentials and your access tokens are kept only on the computer where the App runs, in a credentials folder that is excluded from version control; the App never prints or logs them (see the <a href="privacy.html#storage">Privacy Policy</a>). You are responsible for keeping that computer and its user account secure. If you believe a token has been exposed, revoke the App's access in TikTok right away and tell us (see <a href="#contact">Contact</a>).</p>
+
+<h2 id="thirdparty">9. Third-party services</h2>
+<p>The App works with services run by other companies, mainly TikTok. It can also connect to the series' YouTube channel (Google), which it currently uses only to confirm the channel's name and ID; it does not upload to YouTube. Your use of those services is governed by their own terms and privacy policies, including the <a href="https://www.tiktok.com/legal/terms-of-service">TikTok Terms of Service</a> and, for YouTube, the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. We do not control those services and are not responsible for their availability, decisions or changes.</p>
+<p>The App is independent. It is not affiliated with, endorsed by, or sponsored by TikTok, ByteDance, YouTube or Google.</p>
+
+<h2 id="privacy">10. Privacy</h2>
+<p>Our <a href="privacy.html">Privacy Policy</a> explains what information the App accesses, how it is stored, how long it is kept and how to delete it. It is part of these Terms.</p>
+
+<h2 id="disconnect">11. Disconnecting and termination</h2>
+<p>You can stop using the App and disconnect your TikTok account at any time:</p>
+<ul>
+  <li>the App's disconnect command asks TikTok to revoke the App's access and deletes the stored tokens from the computer;</li>
+  <li>you can also remove the App in your TikTok account settings, in the section listing connected apps;</li>
+  <li>you can ask us to delete your stored tokens and upload records (see <a href="privacy.html#deletion">Disconnecting and deletion</a>).</li>
+</ul>
+<p>Disconnecting does not delete drafts or posts on TikTok; those stay under your control in the TikTok app. We may stop offering the App, or stop connecting a particular account, at any time.</p>
+
+<h2 id="warranty">12. No warranty</h2>
+<p>The App is provided "as is" and "as available", without warranties of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose and non-infringement. We do not guarantee that uploads will succeed, that TikTok will accept a video, or that the App will be uninterrupted or error-free.</p>
+
+<h2 id="liability">13. Limitation of liability</h2>
+<p>To the fullest extent permitted by law, we are not liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, content, followers, revenue or profits, arising from your use of the App or of any third-party service. Nothing in these Terms limits liability that cannot be limited by law.</p>
+
+<h2 id="changes">14. Changes to these Terms</h2>
+<p>We may update these Terms. When we do, we will change the "Last updated" date above. If a change materially affects how your TikTok account is used, we will tell connected account owners before it takes effect. Continued use after an update means you accept the updated Terms.</p>
+
+<h2 id="law">15. Governing law</h2>
+<p>These Terms are governed by the laws of the Kingdom of Saudi Arabia, except where the law of your place of residence gives you protections that cannot be waived.</p>
+
+<h2 id="contact">16. Contact</h2>
+<p>Questions about these Terms: Aya Askar, <a href="mailto:has42212@gmail.com">has42212@gmail.com</a>.</p>
+</div></main>
+
+<footer class="site"><div class="wrap">
+  Qaryat Al-Sidrah Studio · <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:has42212@gmail.com">Contact</a>
+</div></footer>
+</body>
+</html>

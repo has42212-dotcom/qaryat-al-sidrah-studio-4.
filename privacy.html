@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - Qaryat Al-Sidrah Studio</title>
+<meta name="description" content="Privacy Policy for Qaryat Al-Sidrah Studio: what TikTok account information and tokens it accesses, where they are stored, how long they are kept, and how to delete them.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">Qaryat Al-Sidrah Studio</a>
+  <nav><a href="index.html">Home</a><a href="terms.html">Terms of Service</a><a href="privacy.html" aria-current="page">Privacy Policy</a></nav>
+</div></header>
+
+<main><div class="wrap">
+<h1>Privacy Policy</h1>
+<p class="meta">Effective date: November 19, 2026 · Last updated: November 19, 2026</p>
+
+<div class="summary">
+<p><strong>In short:</strong></p>
+<ul>
+  <li>Qaryat Al-Sidrah Studio is a desktop app. What it stores stays on the computer where it runs. There is no server, database, analytics or advertising.</li>
+  <li>From TikTok, the App receives your account identifier, your display name (shown, not stored) and the tokens that let it upload drafts.</li>
+  <li>The App uploads videos as <strong>drafts only</strong> and never publishes automatically.</li>
+  <li>Your information is not sold, rented or shared, and is not used for advertising.</li>
+  <li>Disconnecting revokes the App's access at TikTok and deletes the stored tokens from the computer.</li>
+</ul>
+</div>
+
+<nav class="toc" aria-label="Contents"><ol>
+  <li><a href="#who">Who we are</a></li>
+  <li><a href="#app">What the App does</a></li>
+  <li><a href="#collect">Information the App accesses</a></li>
+  <li><a href="#login">How TikTok sign-in works</a></li>
+  <li><a href="#use">How the information is used</a></li>
+  <li><a href="#storage">Where and how it is stored</a></li>
+  <li><a href="#sharing">Sharing</a></li>
+  <li><a href="#retention">Retention</a></li>
+  <li><a href="#deletion">Disconnecting and deletion</a></li>
+  <li><a href="#rights">Your rights</a></li>
+  <li><a href="#youtube">YouTube</a></li>
+  <li><a href="#website">This website</a></li>
+  <li><a href="#children">Children</a></li>
+  <li><a href="#security">Security incidents</a></li>
+  <li><a href="#changes">Changes to this Policy</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ol></nav>
+
+<h2 id="who">1. Who we are</h2>
+<p>Qaryat Al-Sidrah Studio (the "App") is operated by Aya Askar ("we", "us"), who is responsible for the information described in this Policy. Contact: <a href="mailto:has42212@gmail.com">has42212@gmail.com</a>.</p>
+
+<h2 id="app">2. What the App does</h2>
+<p>The App is a desktop video production studio for the Qaryat Al-Sidrah animated series. It runs on the operator's own computer, where it organises, edits, checks and exports videos. When a video is finished, the App can send it to a connected TikTok account <strong>as a draft</strong>. The account owner then reviews the draft in the TikTok app and decides whether to post it.</p>
+<p>The App never publishes automatically. It does not use TikTok's Direct Post feature and does not request TikTok's publishing permission.</p>
+
+<h2 id="collect">3. Information the App accesses</h2>
+<p>The App requests only two TikTok permissions (scopes): <code>user.info.basic</code> (Login Kit) and <code>video.upload</code> (Content Posting API).</p>
+<div class="table-scroll"><table>
+  <thead><tr><th>Information</th><th>Source</th><th>Why</th><th>Stored?</th></tr></thead>
+  <tbody>
+    <tr><td>TikTok account identifier (<code>open_id</code>)</td><td>TikTok, at sign-in</td><td>Identifies which account the tokens belong to</td><td>Yes, in the token file</td></tr>
+    <tr><td>Display name</td><td>TikTok (<code>user.info.basic</code>)</td><td>Shown to the operator to confirm the right account is connected</td><td>No. Displayed only</td></tr>
+    <tr><td>Access token (valid about 2 hours) and refresh token (valid up to 180 days)</td><td>TikTok, at sign-in and on each renewal</td><td>Authorise draft uploads without signing in every time</td><td>Yes, in the token file</td></tr>
+    <tr><td>Granted scopes, token lifetimes, time the token was issued</td><td>TikTok / the App</td><td>Check permissions and know when to renew</td><td>Yes, in the token file</td></tr>
+    <tr><td>Upload records: date and time, the video's file location and size, TikTok's upload ID (<code>publish_id</code>), the upload status, and the approval note entered for that upload</td><td>Created by the App</td><td>A record of what was sent to TikTok and whether the draft arrived</td><td>Yes, in an upload log (see <a href="#retention">Retention</a>)</td></tr>
+  </tbody>
+</table></div>
+<p>The App does <strong>not</strong> access your TikTok password, email address, phone number, followers, following list, messages, likes, comments, viewing history, analytics or existing videos. It does not read contacts, location or device identifiers, and it uses no cookies, tracking or analytics. Upload records do not contain tokens, your account identifier or your display name.</p>
+<p>The videos the App uploads are produced by the operator in the App. The App does not download anything from your TikTok account.</p>
+
+<h2 id="login">4. How TikTok sign-in works</h2>
+<ol>
+  <li>The App opens TikTok's official authorisation page (TikTok Login Kit for Desktop) in your browser. You sign in to TikTok there, so your password goes only to TikTok.</li>
+  <li>TikTok shows the permissions requested (<code>user.info.basic</code>, <code>video.upload</code>), and you choose whether to allow them.</li>
+  <li>The sign-in uses PKCE: a new one-time secret is created for every sign-in, and TikTok receives only its SHA-256 fingerprint. A random <code>state</code> value is checked to confirm the response belongs to the sign-in you started. Responses that fail this check are discarded.</li>
+  <li>TikTok returns you to a temporary address on your own computer (<code>http://localhost:3455/callback/</code>). The App listens there only while a sign-in is in progress, for at most 10 minutes. It then exchanges the one-time code for tokens directly with TikTok over HTTPS.</li>
+</ol>
+
+<h2 id="use">5. How the information is used</h2>
+<p>The information is used only to:</p>
+<ul>
+  <li>connect your TikTok account and keep the connection working;</li>
+  <li>send a video to your TikTok account as a draft, when the operator starts an upload for that video;</li>
+  <li>check whether the draft was delivered to your TikTok inbox;</li>
+  <li>keep a record of uploads with the series' production files.</li>
+</ul>
+<p>It is not used for advertising, profiling, selling, or training machine-learning models.</p>
+
+<h2 id="storage">6. Where and how it is stored</h2>
+<ul>
+  <li><strong>Only on the operator's computer.</strong> TikTok tokens and your account identifier are saved in one file in the App's private credentials folder. The App's own TikTok client credentials, issued to the App by TikTok, are kept in the same folder. Nothing is sent to a server we operate, because there is none.</li>
+  <li><strong>Excluded from version control.</strong> The credentials folder is excluded from the App's version control, so tokens and client credentials are not included in copies of the project made that way.</li>
+  <li><strong>Never displayed or logged.</strong> The App does not print or log tokens, the client secret or authorisation codes, and its upload records contain none of them.</li>
+  <li><strong>Encrypted in transit.</strong> All communication with TikTok uses HTTPS. Video data is sent only to the upload address TikTok issues for that upload, and the App refuses an upload address that is not HTTPS.</li>
+  <li><strong>At rest, protected by the computer's user account.</strong> The token file is an ordinary file protected by the operating system's account permissions. The App does not add its own encryption.</li>
+  <li><strong>Least privilege.</strong> The App asks TikTok only for <code>user.info.basic</code> and <code>video.upload</code>.</li>
+</ul>
+
+<h2 id="sharing">7. Sharing</h2>
+<p>We do not sell, rent or trade your information. Information leaves the computer only:</p>
+<ul>
+  <li><strong>to TikTok</strong>: sign-in and token requests, the video files approved for upload, status checks, and revocation when you disconnect. TikTok handles that data under its own <a href="https://www.tiktok.com/legal/privacy-policy">Privacy Policy</a>;</li>
+  <li><strong>to authorities</strong>, if we are required to disclose it by law.</li>
+</ul>
+
+<h2 id="retention">8. Retention</h2>
+<p>The App has no automatic time-based deletion. Each item is kept as follows:</p>
+<div class="table-scroll"><table>
+  <thead><tr><th>Information</th><th>How long it is kept</th></tr></thead>
+  <tbody>
+    <tr><td>Token file (access token, refresh token, account identifier, scopes, lifetimes)</td><td>From sign-in until you disconnect. It is overwritten each time the token is renewed, and TikTok issues a new refresh token on every renewal. If the tokens expire or you revoke access only inside TikTok, the file stays on the computer but can no longer be used, until it is deleted by disconnecting or by hand. TikTok limits the access token to about 2 hours and the refresh token to up to 180 days.</td></tr>
+    <tr><td>Display name</td><td>Not kept. It is shown on screen when the connection is checked.</td></tr>
+    <tr><td>Upload records</td><td>Kept with the series' production files as a record of what was sent, until the operator deletes them. Disconnecting does not delete them. If the project's files have been saved to its local version history, earlier copies remain in that history until it is rewritten.</td></tr>
+    <tr><td>Video files</td><td>The operator's own production files. They stay on the computer as part of the series. The copy uploaded to TikTok is held by TikTok (see below).</td></tr>
+    <tr><td>App client credentials</td><td>Kept while the App is in use. These belong to the App, not to any user.</td></tr>
+  </tbody>
+</table></div>
+<p><strong>On TikTok's side:</strong> drafts delivered to your inbox, anything you post, and TikTok's own records are held and controlled by TikTok and by you in the TikTok app. The App cannot delete anything from TikTok.</p>
+
+<h2 id="deletion">9. Disconnecting and deletion</h2>
+<ul>
+  <li><strong>Disconnect through the App:</strong> the operator runs the App's disconnect command. It asks TikTok to revoke the App's access (TikTok's documented revocation, after which the App no longer appears among your connected apps) and deletes the token file from the computer. If TikTok cannot be reached, the local file is still deleted, and you should then also remove the App in TikTok.</li>
+  <li><strong>Disconnect in TikTok:</strong> you can remove the App at any time in your TikTok account's settings, in the section that lists apps connected to your account. The stored tokens stop working. To also delete the local token file, ask us (below).</li>
+  <li><strong>Ask us:</strong> email <a href="mailto:has42212@gmail.com">has42212@gmail.com</a> to have your tokens and upload records deleted. We will confirm when it is done, and we aim to respond within 30 days.</li>
+  <li>Disconnecting does not delete drafts or posts on TikTok. Manage or delete those in the TikTok app.</li>
+</ul>
+
+<h2 id="rights">10. Your rights</h2>
+<p>Subject to the law that applies to you, you can ask us to:</p>
+<ul>
+  <li>tell you what information we hold about you and give you a copy;</li>
+  <li>correct inaccurate information;</li>
+  <li>delete your information;</li>
+  <li>stop using your information, by disconnecting (this does not undo anything done before).</li>
+</ul>
+<p>To make a request, email <a href="mailto:has42212@gmail.com">has42212@gmail.com</a>. We may ask you to confirm that you control the TikTok account before acting on a request. You may also have the right to complain to the data protection authority where you live.</p>
+
+<h2 id="youtube">11. YouTube</h2>
+<p>The App can also be connected to the series' YouTube channel through Google's sign-in, which uses YouTube API Services. Today the App uses this connection only to read the connected channel's name and ID, to confirm it is the correct channel. <strong>The App does not currently upload videos to YouTube or change anything on the channel.</strong> We will update this Policy before adding YouTube uploads.</p>
+<p>The App requests the YouTube permissions <code>youtube.upload</code> and <code>youtube</code>. Google's tokens are stored in the same local credentials folder, under the same protections as described in <a href="#storage">section 6</a>. They are kept until the operator deletes them. To revoke access, use <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; the App has no YouTube disconnect command, so ask us to delete the local token file too. See the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2 id="website">12. This website</h2>
+<p>These pages are static. They set no cookies and contain no scripts, analytics, advertising or tracking. The hosting provider (GitHub Pages) may keep standard technical logs, such as IP addresses and request times, under its own privacy terms.</p>
+
+<h2 id="children">13. Children</h2>
+<p>The App is not directed at children under 13, and we do not knowingly collect information from them. A TikTok account connected to the App must meet TikTok's own age requirements. If you believe a child's information has been connected, contact us and we will delete it.</p>
+
+<h2 id="security">14. Security incidents</h2>
+<p>If we learn that tokens or account information held by the App have been exposed, we will revoke the affected access, inform the affected account owners, and take any further steps the applicable law requires.</p>
+
+<h2 id="changes">15. Changes to this Policy</h2>
+<p>We may update this Policy. When we do, we will change the "Last updated" date above. If a change materially affects how your information is used, we will inform connected account owners before it takes effect.</p>
+
+<h2 id="contact">16. Contact</h2>
+<p>Privacy questions and requests: Aya Askar, <a href="mailto:has42212@gmail.com">has42212@gmail.com</a>.</p>
+</div></main>
+
+<footer class="site"><div class="wrap">
+  Qaryat Al-Sidrah Studio · <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:has42212@gmail.com">Contact</a>
+</div></footer>
+</body>
+</html>
